@@ -1,0 +1,24 @@
+*{
+background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+p1{
+
+    margin-left: 20px;
+    color: rgb(3, 115, 78);
+    background-color:lightblue;
+    font-size: 20px;
+    font-family:"Trirong", serif;
+
+}
+.center{
+
+    margin-left: 20px;
+    color:rgb(102, 95, 108);
+    background-color: bisque;
+}

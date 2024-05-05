@@ -1,0 +1,15 @@
+h1{
+    color:black;
+    text-align: center;
+}
+div{
+    background-color: brown;
+    width: 200px;
+    height: 75px;
+    border: 1px solid;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    text-align: center;
+}
+
+
