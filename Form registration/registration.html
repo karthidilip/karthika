@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Registration</title>
+</head>
+<body>
+<!-- //create a form -->
+<div class="container">
+  <div class="card">
+       <h2>Registration Form</h2>
+        <form action ="#">
+
+<div class = "form-group ">
+<label for="UserName">UserName</label>
+<input type="text"class="form-control" name="username" id="username"placeholder="Enter the name"/>
+
+</div>
+<div class = "form-group">
+     <label for="Mobile Number">Mobile No</label>
+      <input type="text"  class="form-control" name="Mobile Number " id="Mobile Number"placeholder="Enter the Mobile Number"/>
+      </div>      
+<div class = "form-group">
+  <label for="password"> password</label>
+  <input type="text" class="form-control" name="password" id="password"placeholder="Enter the password"/>
+  
+  </div>
+  <div  class = "form-group ">
+      <label for="confirm password">confirm password</label>
+      <input type="text"class="form-control" name="confirm password" id="confirm password" placeholder="Enter the conform password"/>
+  
+      </div>
+      <div class="text-center">
+      <button type="button" onclick="saveData()" class="btw-btn-primary" id="save-btn">Register</button>
+      <button type="reset"  class="btw-btn-waring" id="">Reset</button>
+       </div> 
+  </form>
+  </div>
+    </div>
+    <script>
+      //create variables to access data from input box
+      function saveData(){
+        let username = document.getElementById("username").value;
+        let MobileNumber = document.getElementById("Mobile Number").value;
+        let password = document.getElementById("password").value;
+        let confirmpassword = document.getElementById("confirm password").value;
+        //inserting name,pwd mob no in local storage
+      //   localStorage.setItem("username",username);
+      //   localStorage.setItem("Mobile Number",MobileNumber);
+      //   localStorage.setItem("password",password);
+      //   localStorage.setItem("confirm password",confirmpassword);
+        
+        //create an array to keep every entries in local storage
+        let userData=new Array();
+        userData=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+           if(userData.some((value) =>{
+            return value.username==username 
+           })) {
+            alert("Duplicate Data")
+           }
+           else{
+            userData.push({
+             "username":username,
+             "Mobile Number":MobileNumber,
+             "password":password,
+             "confirm password":confirmpassword
+            })
+            localStorage.setItem("users",JSON.stringify(userData));
+           }
+
+           window.location.href = "login.html";
+
+      }
+    </script>
+
+</body>
+</html>

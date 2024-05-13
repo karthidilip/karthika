@@ -1,0 +1,40 @@
+.container {
+    width:100%;
+    height:100%;
+    background-color:bisque;
+
+}
+.container .card h2{
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+}
+
+.container .card{
+width:50%;
+height:60%;
+background-color:whitesmoke;
+margin:auto;
+padding:10px;
+margin-bottom: 10px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.container .card .form-group{
+    width: 50%;
+height:50%;
+margin-left:25%;
+}
+
+.text-center .btw-btn-primary{
+    background-color: rgb(207, 107, 35);
+    outline: none;
+    margin-top: 15px;
+}
+.container .card .secondary{
+    text-align: center;
+    margin-top: 15px;
+}
+.text-center .btw-btn-waring{
+    background-color: yellowgreen;
+    margin-left: 2%;
+}
